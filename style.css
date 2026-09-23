@@ -269,36 +269,49 @@ body {
   opacity: 0.92;
 }
 
-/* Desktop Floating Pill Navigation */
+/* Desktop Floating Pill Navigation (White Glass Effect) */
 .nav-pill {
   display: flex;
   align-items: center;
-  background: rgba(20, 20, 26, 0.65);
-  border: 1px solid var(--border-light);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: var(--radius-pill);
-  padding: 4px 6px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 5px 6px;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: all var(--transition-smooth);
+}
+
+.nav-pill:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.09) 100%);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 .nav-link {
   font-family: var(--font-sans);
   font-size: 0.88rem;
   font-weight: 500;
-  color: var(--text-gray-400);
+  color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: var(--radius-pill);
   transition: all var(--transition-fast);
 }
 
 .nav-link:hover {
-  color: var(--text-white);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .nav-link.active {
-  color: var(--text-white);
-  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-weight: 600;
 }
 
 .header-action {
@@ -743,6 +756,124 @@ body {
   font-weight: 700;
 }
 
+/* Education / University Credential Card */
+.education-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 16px 22px;
+  margin: 6px 0 10px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-orange-accent), #ff914d);
+  border-radius: 4px 0 0 4px;
+}
+
+.education-card:hover {
+  border-color: rgba(255, 98, 0, 0.4);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 98, 0, 0.05) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 98, 0, 0.1);
+}
+
+.education-logo-wrapper {
+  flex-shrink: 0;
+  width: 58px;
+  height: 58px;
+  background: radial-gradient(circle, rgba(255, 98, 0, 0.18) 0%, rgba(255, 255, 255, 0.04) 80%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  transition: all var(--transition-smooth);
+}
+
+.education-card:hover .education-logo-wrapper {
+  border-color: rgba(255, 98, 0, 0.5);
+  transform: scale(1.06);
+  box-shadow: 0 0 16px rgba(255, 98, 0, 0.25);
+}
+
+.education-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+
+.education-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex-grow: 1;
+}
+
+.education-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-orange-accent);
+}
+
+.edu-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--color-orange-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--color-orange-accent);
+}
+
+.education-degree {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.education-institute {
+  font-size: 0.92rem;
+  color: var(--text-gray-300);
+  font-weight: 500;
+  margin: 0;
+}
+
+.education-status-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-gray-400);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.education-status-tag svg {
+  color: var(--color-orange-accent);
+  flex-shrink: 0;
+}
+
 .about-expandable {
   display: grid;
   grid-template-rows: 0fr;
@@ -1051,6 +1182,99 @@ body {
 .skill-tailwind .skill-progress-bar {
   background: linear-gradient(90deg, #0284c7, #38bdf8);
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+/* Node.js */
+.skill-node:hover {
+  border-color: rgba(34, 197, 94, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(34, 197, 94, 0.15);
+}
+
+.skill-node .skill-card-glow {
+  background: radial-gradient(circle, #22c55e 0%, transparent 70%);
+}
+
+.node-icon-box {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  color: #22c55e;
+}
+
+.skill-node .skill-card-role {
+  color: #4ade80;
+}
+
+.skill-node .skill-badge-level {
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+
+.skill-node .skill-progress-bar {
+  background: linear-gradient(90deg, #15803d, #22c55e);
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+}
+
+/* Express.js */
+.skill-express:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(168, 85, 247, 0.15);
+}
+
+.skill-express .skill-card-glow {
+  background: radial-gradient(circle, #a855f7 0%, transparent 70%);
+}
+
+.express-icon-box {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  color: #c084fc;
+}
+
+.skill-express .skill-card-role {
+  color: #c084fc;
+}
+
+.skill-express .skill-badge-level {
+  background: rgba(168, 85, 247, 0.12);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  color: #e9d5ff;
+}
+
+.skill-express .skill-progress-bar {
+  background: linear-gradient(90deg, #7e22ce, #a855f7);
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+/* MongoDB */
+.skill-mongodb:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(16, 185, 129, 0.15);
+}
+
+.skill-mongodb .skill-card-glow {
+  background: radial-gradient(circle, #10b981 0%, transparent 70%);
+}
+
+.mongodb-icon-box {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: #10b981;
+}
+
+.skill-mongodb .skill-card-role {
+  color: #34d399;
+}
+
+.skill-mongodb .skill-badge-level {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #a7f3d0;
+}
+
+.skill-mongodb .skill-progress-bar {
+  background: linear-gradient(90deg, #059669, #10b981);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
 }
 
 .skill-card-top {
@@ -1746,8 +1970,8 @@ body {
 
 .footer-top-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1.5fr;
-  gap: 48px;
+  grid-template-columns: 1.1fr 0.85fr 2.05fr;
+  gap: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid var(--border-light);
 }
@@ -1843,18 +2067,24 @@ body {
 }
 
 /* ==========================================================================
-   LEAD CAPTURE FORM (GLASSMORPHISM)
+   DYNAMIC CONTACT & LEAD CAPTURE FORM (GLASSMORPHISM)
    ========================================================================== */
 .lead-capture-form {
-  background: rgba(255, 255, 255, 0.025);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+  transition: border-color var(--transition-smooth);
+}
+
+.lead-capture-form:focus-within {
+  border-color: rgba(255, 98, 0, 0.3);
 }
 
 .form-row {
@@ -1885,7 +2115,7 @@ body {
   color: var(--text-white);
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  padding: 10px 14px;
+  padding: 11px 14px;
   outline: none;
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
   width: 100%;
@@ -1907,16 +2137,48 @@ body {
 
 .form-select {
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ff6200' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+  padding-right: 38px;
 }
 
 .form-select option {
   background-color: #0e0f13;
   color: #ffffff;
+  padding: 8px;
 }
 
 .form-textarea {
   resize: vertical;
-  min-height: 85px;
+  min-height: 88px;
+}
+
+.dynamic-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: dynamicFieldFade 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.purpose-specific-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@keyframes dynamicFieldFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .form-footer-action {
@@ -1925,10 +2187,13 @@ body {
   justify-content: space-between;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 .btn-submit-lead {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 11px 24px;
   font-size: 0.92rem;
   font-weight: 700;
@@ -1942,7 +2207,7 @@ body {
 
 .form-status {
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all var(--transition-fast);
 }
 
@@ -2151,6 +2416,25 @@ body {
 
   .about-lead {
     font-size: 1.1rem;
+  }
+
+  .education-card {
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .education-logo-wrapper {
+    width: 48px;
+    height: 48px;
+    padding: 4px;
+  }
+
+  .education-degree {
+    font-size: 1rem;
+  }
+
+  .education-institute {
+    font-size: 0.85rem;
   }
 
   .statement-headline {
