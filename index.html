@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umer Akram — Web Developer & UI/UX Designer</title>
+  <meta name="description"
+    content="Umer Akram — Web developer and UI/UX designer crafting high-converting websites that turn visitors into clients.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Big+Shoulders+Display:wght@700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Ambient Top Background Glow -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <!-- Logo -->
+      <a href="#hero" class="logo" id="site-logo" aria-label="Umer Akram">
+        <img src="logo.png" alt="Umer Akram Logo" class="logo-img">
+      </a>
+
+      <!-- Desktop Navigation Pill -->
+      <nav class="nav-pill" id="desktop-nav" aria-label="Main Navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link active">Projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Action CTA -->
+      <div class="header-action">
+        <a href="#contact" class="btn btn-primary btn-header" id="header-cta-btn">
+          <span>Start a Project</span>
+          <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu" id="mobile-menu-drawer">
+      <nav class="mobile-nav-links">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary mobile-cta-btn">
+        <span>Start a Project</span>
+        <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-wrapper">
+
+        <!-- Main Hero Display Headline (Aligned Group) -->
+        <div class="hero-main-display">
+          <div class="hero-title-group">
+            <div class="hero-greeting">Hi, I am</div>
+            <h1 class="hero-title-text">UMER AKRAM</h1>
+          </div>
+        </div>
+
+        <!-- Lower Hero Row (Split Content) -->
+        <div class="hero-bottom-grid">
+
+          <!-- Left Column: Trust Badge, Catchphrase & Action Buttons -->
+          <div class="hero-left-content">
+            <div class="trust-badge">
+              <span class="sparkle-icon">✦</span>
+              <span class="trust-text">Available for New Projects</span>
+            </div>
+
+            <h2 class="hero-tagline">Websites that turn visitors into clients</h2>
+
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-primary btn-large">
+                <span>Start a Project</span>
+                <span class="btn-icon-bubble">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
+
+              <a href="#projects" class="btn btn-secondary btn-large">
+                <span>View My Work</span>
+                <svg class="icon-arrow-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="7" x2="17" y2="17"></line>
+                  <polyline points="17 7 17 17 7 17"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Glassmorphic Client Satisfaction Card -->
+          <div class="hero-right-content">
+            <div class="satisfaction-card">
+              <div class="card-inner">
+                <div class="card-header-row">
+                  <div class="card-status-pill">
+                    <span class="sparkle-dot-orange">✦</span>
+                    <span>Engineering & Design</span>
+                  </div>
+                </div>
+
+                <p class="satisfaction-text">
+                  <strong>High-Impact</strong> Web Solutions Engineered For Speed, Scalability & Conversion.
+                </p>
+
+                <div class="pill-tags-row">
+                  <span class="pill-tag">⚡ Modern Stack</span>
+                  <span class="pill-tag">🎨 Clean UI/UX</span>
+                  <span class="pill-tag">🚀 Fast Delivery</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER BANNER -->
+    <section class="marquee-section" aria-label="Skills and Capabilities Ticker">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="ticker-item">FRONTEND ARCHITECTURE</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">REACT & MODERN JS</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">UI/UX & PRODUCT DESIGN</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">FULL-STACK WEB APPS</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">PERFORMANCE & SEO</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">RESPONSIVE & ACCESSIBLE</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">CLEAN & SCALABLE CODE</span>
+          <span class="ticker-star">✦</span>
+        </div>
+        <!-- Cloned duplicate for seamless infinite loop -->
+        <div class="marquee-content" aria-hidden="true">
+          <span class="ticker-item">FRONTEND ARCHITECTURE</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">REACT & MODERN JS</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">UI/UX & PRODUCT DESIGN</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">FULL-STACK WEB APPS</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">PERFORMANCE & SEO</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">RESPONSIVE & ACCESSIBLE</span>
+          <span class="ticker-star">✦</span>
+          <span class="ticker-item">CLEAN & SCALABLE CODE</span>
+          <span class="ticker-star">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="about-section" id="about">
+      <div class="about-container">
+
+        <!-- Left: Pill Section Indicator -->
+        <div class="about-tag-col">
+          <div class="section-badge">
+            <span class="sparkle-dot">✦</span>
+            <span>About Me</span>
+          </div>
+          <div class="badge-line" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: Bio Statement & CTA buttons -->
+        <div class="about-content-col">
+          <p class="about-lead">
+            My name is <strong>Muhammad Umer Akram</strong>, and I am a final-year <strong>BS Software Engineering</strong> student at the <strong>University of Central Punjab</strong>. I am passionate about software development and enjoy working on practical projects that solve real-world problems.
+          </p>
+
+          <div class="about-expandable" id="about-expandable">
+            <p class="about-description">
+              Currently, I am working with my three team members on our Final Year Project, <strong class="text-orange-highlight">PETLINK</strong> — a comprehensive platform designed for buying, selling, and adopting pets. The platform also includes a dedicated pet store where customers can find various pet-related products and essentials. So far, two phases of the project have been successfully completed, while the remaining two phases are currently in progress. Working on PETLINK as a team is helping us enhance our technical, communication, teamwork, and problem-solving skills while gaining practical experience in developing a complete software solution.
+            </p>
+          </div>
+
+          <div class="about-actions-wrapper">
+            <button class="btn-read-more" id="about-read-more-btn" type="button" aria-expanded="false" aria-controls="about-expandable">
+              <span class="read-more-text">Read More</span>
+              <svg class="read-more-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="skills-section" id="skills">
+      <div class="skills-container">
+
+        <!-- Header / Title -->
+        <div class="skills-header">
+          <div class="section-badge-center">
+            <span class="sparkle-dot-orange">●</span>
+            <span>Technical Mastery</span>
+          </div>
+          <h2 class="skills-title">Core Technologies & Stack</h2>
+          <p class="skills-subtitle">
+            Specialized in crafting performant, accessible, and interactive digital products with modern web technologies.
+          </p>
+        </div>
+
+        <!-- 4-Column Responsive Skills Grid -->
+        <div class="skills-grid">
+
+          <!-- SKILL 1: HTML5 -->
+          <div class="skill-card skill-html5">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-top">
+              <div class="skill-icon-box html-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M12 2L4 5l1.6 13.5L12 22l6.4-3.5L20 5l-8-3zm5.6 15.5L12 19.8l-5.6-2.3L5.3 6.6h13.4l-1.1 10.9zm-9.3-8.8l.2 2.2h6.8l-.3 2.4H8.7l.3 2.4h5.7l-.5 3.3-2.2.7-2.2-.7-.2-1.3H7.8l.3 2.6 3.9 1.3 3.9-1.3.9-6.3.3-2.3.2-2H8.3z"/>
+                </svg>
+              </div>
+              <div class="skill-badge-level">98% Mastery</div>
+            </div>
+
+            <div class="skill-card-body">
+              <h3 class="skill-card-title">HTML5</h3>
+              <p class="skill-card-role">Semantic Markup & Architecture</p>
+              <p class="skill-card-desc">
+                Structuring clean, accessible (WCAG/a11y), and search-engine optimized web documents with modern semantic elements.
+              </p>
+            </div>
+
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-bar" style="--skill-pct: 98%;"></div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-pill">Semantic HTML</span>
+              <span class="skill-pill">Web Accessibility</span>
+              <span class="skill-pill">SEO & Schema</span>
+              <span class="skill-pill">Canvas & Audio</span>
+            </div>
+          </div>
+
+          <!-- SKILL 2: CSS3 -->
+          <div class="skill-card skill-css3">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-top">
+              <div class="skill-icon-box css-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M12 2L4 5l1.6 13.5L12 22l6.4-3.5L20 5l-8-3zm5.6 15.5L12 19.8l-5.6-2.3L5.3 6.6h13.4l-1.1 10.9zm-2.2-8.8H8.5l-.2-2h8.7l-.3 2H8.8l.2 2.2h6.4l-.5 4.8-2.9 1-2.9-1-.2-1.4H7.9l.4 2.8 3.7 1.3 3.7-1.3.7-7.4z"/>
+                </svg>
+              </div>
+              <div class="skill-badge-level">95% Mastery</div>
+            </div>
+
+            <div class="skill-card-body">
+              <h3 class="skill-card-title">CSS3</h3>
+              <p class="skill-card-role">Styling, Layouts & Animations</p>
+              <p class="skill-card-desc">
+                Designing responsive, fluid grid/flexbox layouts with smooth keyframe animations, glassmorphism, and custom tokens.
+              </p>
+            </div>
+
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-bar" style="--skill-pct: 95%;"></div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-pill">Grid & Flexbox</span>
+              <span class="skill-pill">Fluid Animations</span>
+              <span class="skill-pill">Glassmorphism</span>
+              <span class="skill-pill">Responsive Design</span>
+            </div>
+          </div>
+
+          <!-- SKILL 3: JavaScript -->
+          <div class="skill-card skill-js">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-top">
+              <div class="skill-icon-box js-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M3 3h18v18H3V3zm13.7 14.5c1.9 0 3.3-1.1 3.3-3.1 0-1.9-1.2-2.7-2.9-3.4l-.5-.2c-.9-.4-1.3-.7-1.3-1.3 0-.6.5-1 1.3-1 .8 0 1.3.3 1.7.9l1.6-1c-.7-1.2-1.9-1.8-3.3-1.8-2.1 0-3.3 1.3-3.3 3 0 1.8 1.1 2.6 2.7 3.3l.5.2c1 .4 1.5.8 1.5 1.4 0 .7-.6 1.1-1.5 1.1-1.1 0-1.8-.6-2.2-1.4l-1.7 1c.7 1.5 2 2.4 3.8 2.4zm-7.6-.2V9.6H6.8v5.5c0 1.7.8 2.4 2.3 2.4.6 0 1.2-.1 1.7-.3l-.4-1.7c-.3.1-.6.2-.9.2-.5 0-.8-.3-.8-.9z"/>
+                </svg>
+              </div>
+              <div class="skill-badge-level">92% Mastery</div>
+            </div>
+
+            <div class="skill-card-body">
+              <h3 class="skill-card-title">JavaScript</h3>
+              <p class="skill-card-role">Modern Logic & Async Flow</p>
+              <p class="skill-card-desc">
+                Writing clean ES6+ dynamic code, asynchronous operations, robust API integrations, event systems, and complex DOM interactions.
+              </p>
+            </div>
+
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-bar" style="--skill-pct: 92%;"></div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-pill">ES6+ Next Gen</span>
+              <span class="skill-pill">Async / Fetch API</span>
+              <span class="skill-pill">DOM & Events</span>
+              <span class="skill-pill">Object-Oriented</span>
+            </div>
+          </div>
+
+          <!-- SKILL 4: React.js -->
+          <div class="skill-card skill-react">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-top">
+              <div class="skill-icon-box react-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(0 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"></ellipse>
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"></ellipse>
+                  <circle cx="12" cy="12" r="1.8" fill="currentColor"></circle>
+                </svg>
+              </div>
+              <div class="skill-badge-level">90% Mastery</div>
+            </div>
+
+            <div class="skill-card-body">
+              <h3 class="skill-card-title">React.js</h3>
+              <p class="skill-card-role">Component Architecture & SPA</p>
+              <p class="skill-card-desc">
+                Architecting modular component systems, custom hooks, reactive state workflows, and fast single-page web applications.
+              </p>
+            </div>
+
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-bar" style="--skill-pct: 90%;"></div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-pill">React Hooks</span>
+              <span class="skill-pill">Custom Components</span>
+              <span class="skill-pill">State Management</span>
+              <span class="skill-pill">Virtual DOM</span>
+            </div>
+          </div>
+
+          <!-- SKILL 5: Tailwind CSS -->
+          <div class="skill-card skill-tailwind">
+            <div class="skill-card-glow"></div>
+            <div class="skill-card-top">
+              <div class="skill-icon-box tailwind-icon-box">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                  <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"/>
+                </svg>
+              </div>
+              <div class="skill-badge-level">94% Mastery</div>
+            </div>
+
+            <div class="skill-card-body">
+              <h3 class="skill-card-title">Tailwind CSS</h3>
+              <p class="skill-card-role">Utility-First CSS & Rapid UI</p>
+              <p class="skill-card-desc">
+                Rapidly building bespoke, high-performance, and responsive design systems using modern utility classes and configuration.
+              </p>
+            </div>
+
+            <div class="skill-progress-wrap">
+              <div class="skill-progress-bar" style="--skill-pct: 94%;"></div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-pill">Utility Classes</span>
+              <span class="skill-pill">Responsive Design</span>
+              <span class="skill-pill">Custom Config</span>
+              <span class="skill-pill">Dark Mode UI</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SELECTED WORK / PORTFOLIO GRID -->
+    <section class="projects-section" id="projects">
+      <div class="projects-container">
+
+        <!-- Header / Title -->
+        <div class="projects-header">
+          <div class="section-badge-center">
+            <span class="sparkle-dot-orange">●</span>
+            <span>Some Recent Projects</span>
+          </div>
+          <h2 class="projects-title">Selected Work That Delivers Results</h2>
+        </div>
+
+        <!-- Masonry / Responsive Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- PROJECT 1: Pet Calculator Pro -->
+          <article class="project-card project-card-petcalc">
+            <a href="https://www.petcalculator.online" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Visit Pet Calculator Pro">
+              <div class="card-visual-wrapper card-visual-petcalc">
+                <!-- Watermark Background -->
+                <div class="card-watermark">PetCalc</div>
+
+                <!-- Desktop Screen Mockup Frame -->
+                <div class="desktop-mockup">
+                  <div class="mockup-header-bar">
+                    <div class="mockup-dots">
+                      <span class="dot-red"></span>
+                      <span class="dot-yellow"></span>
+                      <span class="dot-green"></span>
+                    </div>
+                    <div class="mockup-address">
+                      <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                      <span>petcalculator.online</span>
+                    </div>
+                  </div>
+
+                  <div class="mockup-screen-img-wrapper">
+                    <img src="PetCalc SS.png" alt="Pet Calculator Pro Website Screenshot" class="mockup-screen-img" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="project-meta">
+              <div class="project-meta-header">
+                <h3 class="project-title">
+                  <a href="https://www.petcalculator.online" target="_blank" rel="noopener noreferrer">
+                    Pet Calculator Pro
+                  </a>
+                </h3>
+                <span class="project-live-indicator">
+                  <span class="pulse-dot"></span> Live
+                </span>
+              </div>
+              <p class="project-desc">
+                Smart veterinary-backed health calculator suite for dogs and cats — calculating age conversion, calorie requirements (RER/DER), feeding portions, and whelping timeline.
+              </p>
+              
+              <div class="project-tags">
+                <span class="category-tag">Full-Stack Web App</span>
+                <span class="category-tag">React / Vite</span>
+                <span class="category-tag">Health & Utilities</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://www.petcalculator.online" target="_blank" rel="noopener noreferrer" class="btn-project-link btn-project-primary">
+                  <span>Visit Website</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="https://petcalculatorpro-git-main-umerakramofficials-projects.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-link btn-project-secondary">
+                  <span>Vercel Preview</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2: U2 Store -->
+          <article class="project-card project-card-u2store">
+            <a href="https://u2-store.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card-link" aria-label="Visit U2 Store">
+              <div class="card-visual-wrapper card-visual-u2store">
+                <!-- Watermark Background -->
+                <div class="card-watermark">U2Store</div>
+
+                <!-- Desktop Screen Mockup Frame -->
+                <div class="desktop-mockup">
+                  <div class="mockup-header-bar">
+                    <div class="mockup-dots">
+                      <span class="dot-red"></span>
+                      <span class="dot-yellow"></span>
+                      <span class="dot-green"></span>
+                    </div>
+                    <div class="mockup-address">
+                      <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                      <span>u2-store.vercel.app</span>
+                    </div>
+                  </div>
+
+                  <div class="mockup-screen-img-wrapper">
+                    <img src="U2Store ss.png" alt="U2 Store Website Screenshot" class="mockup-screen-img" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="project-meta">
+              <div class="project-meta-header">
+                <h3 class="project-title">
+                  <a href="https://u2-store.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    U2 Store — E-Commerce Platform
+                  </a>
+                </h3>
+                <span class="project-live-indicator">
+                  <span class="pulse-dot"></span> Live
+                </span>
+              </div>
+              <p class="project-desc">
+                Full-featured, modern e-commerce storefront with dynamic product discovery, interactive shopping cart drawer, category navigation, and fluid responsive design.
+              </p>
+              
+              <div class="project-tags">
+                <span class="category-tag">E-Commerce Web App</span>
+                <span class="category-tag">React / Vite</span>
+                <span class="category-tag">Tailwind CSS</span>
+                <span class="category-tag">State Management</span>
+              </div>
+
+              <div class="project-actions">
+                <a href="https://u2-store.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-link btn-project-primary">
+                  <span>Visit Live Store</span>
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <!-- LOWER DISPLAY STATEMENT -->
+    <section class="statement-section">
+      <div class="statement-container">
+        <h2 class="statement-headline">
+          I strive for pay attention<br>to the smallest details
+        </h2>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT SECTION -->
+    <footer class="site-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-top-grid">
+
+          <div class="footer-brand-col">
+            <a href="#hero" class="footer-logo" aria-label="Umer Akram">
+              <img src="logo.png" alt="Umer Akram Logo" class="footer-logo-img">
+              <span>UMERSWEB</span>
+            </a>
+            <p class="footer-tagline">
+              Crafting world-class digital experiences, conversion-driven websites, and bespoke interfaces that scale
+              brands.
+            </p>
+            <div class="footer-status">
+              <span class="status-pulse"></span>
+              <span>Available for new projects & collaborations</span>
+            </div>
+          </div>
+
+          <div class="footer-nav-col">
+            <h4 class="footer-col-title">Navigation</h4>
+            <ul class="footer-links-list">
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Selected Work</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-col">
+            <h4 class="footer-col-title">Get in Touch</h4>
+            <div class="contact-card-box">
+              <p class="contact-invite">Have a project in mind? Let's build something exceptional together.</p>
+              <a href="mailto:umerakramofficial@gmail.com" class="btn btn-primary btn-footer">
+                <span>Start a Project</span>
+                <span class="btn-icon-bubble-sm">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p class="copyright-text">© 2026 UMERSWEB — Umer Akram. All Rights Reserved.</p>
+          <div class="footer-socials">
+            <a href="mailto:umerakramofficial@gmail.com" class="social-icon-btn" aria-label="Email" title="Email: umerakramofficial@gmail.com">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.6 1.6 0 0 0-1.6 1.6 1.6 1.6 0 0 0 1.6 1.6 1.6 1.6 0 0 0 1.6-1.6c0-.88-.72-1.6-1.6-1.6z"/>
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
